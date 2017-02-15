@@ -3,6 +3,31 @@ $(function() {
   $('.switch').on('click', function(){
 
     console.log("clicked");
+
+        if ( $('.switch button').hasClass('on') ){
+          $('.switch button').removeClass('on').addClass('off');
+          $('body').removeClass('light').addClass('dark');
+          $('.status').text("Hey, who turned out the lights?");
+        }
+        else {
+          $('.switch button').removeClass('off').addClass('on');
+          $('body').removeClass('dark').addClass('light');
+          $('.status').text("It's so bright in here!");
+
+        }
+
+        // $('.light').removeClass('light');
+  });
+
+});
+
+
+// $('.status').text("It's so bright in here!");
+//         $('.status').text("Hey, who turned off the lights?");
+
+      //
+      //
+
 // <div class="switch"
 // <button type="button" class="on"></button>
 //  </div>
@@ -34,26 +59,25 @@ $(function() {
 //   other case
 // end
 
-
-    if ( $('.switch button').attr('class') === 'on' ) {
-      $('.switch button').removeClass('on').addClass('off');
-    }
-
-    else {
-      $('.switch button').removeClass('off').addClass('on');
-
-
-
-
-    }
-
-    $('.light').removeClass('light');
-
+    //
+    // if ( $('.switch button').attr('class') === 'on' ) {
+    //   $('.switch button').removeClass('on').addClass('off');
+    // }
+    //
+    // else {
+    //   $('.switch button').removeClass('off').addClass('on');
+    //
+    // }
+    //
+    //
+    // $('.light').removeClass('light');
+    //
 
 
 
-  });
-});
+
+
+
 
 //When someone hits the button in the switch,
 // remove the current state class (on/off), and
